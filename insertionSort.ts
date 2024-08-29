@@ -1,4 +1,4 @@
-const insertionSort = (arr? : number[]): number[] | void => {
+const insertionSort = (arr ? : number[]): number[] | void => {
 
   if (!arr) {
     return;
@@ -13,12 +13,12 @@ const insertionSort = (arr? : number[]): number[] | void => {
         arr[j + 1] = arr[j];
         j--;
       }
-			arr[j+1] = swapValue;
+      arr[j + 1] = swapValue;
     }
-		return arr;
+    return arr;
   } else {
     return arr;
   }
 };
 
-console.log(insertionSort([10, 20, -1, 2,1, 5,5,10])
+console.log(insertionSort([10, 20, -1, 2, 1, 5, 5, 10])
