@@ -2,7 +2,7 @@
 
 ## Argue Selection Sort Correctness
 
-Proof of correctness is found in this Correctness Of Selection Sort(Correctness_Of_Selection_Sort.pdf).
+Proof of correctness is found in this [Correctness Of Selection Sort](Correctness_Of_Selection_Sort.pdf).
 
 ## Performance Benchmarks
 
