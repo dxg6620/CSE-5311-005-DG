@@ -53,3 +53,10 @@ The following benchmarks show the average execution times (in seconds) for diffe
 | 5000       | 8.537500       |
 | 10000      | 33.456084      |
 | 100000     | 1656.255417    |
+
+
+### Benchmark Plot
+
+Here is a plot showing the performance of different sorting algorithms:
+
+![Benchmark Plot](images/benchmark_plot.png)
