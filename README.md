@@ -1,8 +1,12 @@
 # CSE-5311-005-DG
 
+## Argue Selection Sort Correctness
+
+Proof of correctness is found in this Correctness Of Selection Sort(Correctness_Of_Selection_Sort.pdf).
+
 ## Performance Benchmarks
 
-The following benchmarks show the average execution times (in seconds) for different sorting algorithms with various input sizes. The measurements were taken on a MacBook Pro with the following specifications:
+The following benchmarks show the average execution times (in seconds) for sorting algorithms with various input sizes. The measurements were taken on a MacBook Pro with the following specifications:
 
 - **Model:** MacBook Pro
 - **Processor:** Apple M3 Pro
@@ -63,4 +67,4 @@ Here is a plot showing the performance of different sorting algorithms:
 
 ### Code Implementation
 
-All code implementations are located in the [code folder](code/).
+All code implementations are in the [code folder](code/).
