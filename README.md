@@ -59,4 +59,4 @@ The following benchmarks show the average execution times (in seconds) for diffe
 
 Here is a plot showing the performance of different sorting algorithms:
 
-![Benchmark Plot](images/benchmark_plot.png)
+![Benchmark Plot](benchmark_plot.png)
