@@ -9,7 +9,7 @@ The following benchmarks show the average execution times (in seconds) for diffe
 - **RAM:** 18 GB
 - **Storage:** SSD
 
-### Selection Sort
+### [Selection Sort](selectionSort.ts)
 
 | Input Size | Time (seconds) |
 |------------|----------------|
@@ -24,7 +24,7 @@ The following benchmarks show the average execution times (in seconds) for diffe
 | 10000      | 39.903333      |
 | 100000     | 3790.490083    |
 
-### Bubble Sort
+### [Bubble Sort](bubbleSort.ts)
 
 | Input Size | Time (seconds) |
 |------------|----------------|
@@ -39,7 +39,7 @@ The following benchmarks show the average execution times (in seconds) for diffe
 | 10000      | 59.061000      |
 | 100000     | 6447.164208    |
 
-### Insertion Sort
+### [Insertion Sort](insertionSort.ts)
 
 | Input Size | Time (seconds) |
 |------------|----------------|
@@ -60,3 +60,7 @@ The following benchmarks show the average execution times (in seconds) for diffe
 Here is a plot showing the performance of different sorting algorithms:
 
 ![Benchmark Plot](benchmark_plot.png)
+
+### Code Implementation
+
+All code implementations are located in the [code folder](code/).
