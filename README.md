@@ -34,27 +34,27 @@ Let `T(n)` represent the total number of times the statement `x = x + 1;` is exe
 Since the inner statement executes once for every pair of `(i, j)`, the total number of executions is represented by a **double summation**:
 
 \[
-T(n) = \sum_{i=1}^{n} \sum_{j=1}^{n} 1
+T(n)=i=1∑n​j=1∑n​1
 \]
 
 ### Evaluating the Inner Summation:
 The inner summation (over `j`) is independent of `i`, and since the summation over `j` runs from 1 to `n`, the result is:
 
 \[
-\sum_{j=1}^{n} 1 = n
+\∑n​1=n
 \]
 
 ### Evaluating the Outer Summation:
 Now substitute the result of the inner summation into the outer summation. We get:
 
 \[
-T(n) = \sum_{i=1}^{n} n
+T(n)=i=1∑n​n
 \]
 
 This means that for each of the `n` iterations of the outer loop, the inner loop contributes `n` executions of the statement. Therefore:
 
 \[
-T(n) = n \times n = n^2
+T(n)=n×n=n
 \]
 
 ---
@@ -70,7 +70,6 @@ T(n) = 1 + n^2
 However, in asymptotic analysis, constant terms (like the `1` in this case) are insignificant compared to terms that grow with `n`. Therefore, the runtime of the algorithm is dominated by \( n^2 \). The **time complexity** of the algorithm is:
 
 \[
-T(n) = \mathcal{O}(n^2)
-\]
+T(n)=O(n2)\]
 
 ---
