@@ -1,75 +1,56 @@
 
+## 1. Runtime Analysis
+
+The runtime of the function `f(n)` was analyzed mathematically and experimentally. A detailed solution is provided in ![Graph](solution.jpg).
+
+## 2. Timing and Plotting
+
+The runtime of the function was measured for various values of `n` and plotted. The results are shown in ![Figure_1](Figure_1.png).
+
+## 3. Polynomial Fit
+
+A polynomial curve was fitted to the timing data. This is illustrated in ![Figure_2](Figure_2.png).
+
+ - Big-O (Upper Bound):  Since the polynomial is quadratic, the upper bound is (O(n^2))
+ - Big-Omega (Lower Bound): The lower bound will also be \(Ω(n^2)), as the execution time scales closely with \( n^2 \)
+ - Big-Theta (Tight Bound): Therefore, the overall complexity is (Θ(n^2)), as the polynomial suggests quadratic growth.
+
+
+## 4. Effect of Modification
+ 
+ The plot to estimate the value of \( n_0 \) is shown in ![Figure_3](Figure_3.png).
+
+By zooming into the plot for values of \( n \) from 1 to 30, we can observe that the curve follows a polynomial growth pattern fairly closely for small values of \( n \). There isn't a clear deviation from the trend within this range, meaning \( n_0 \), where the time complexity changes or becomes significantly different from the polynomial fit, might be beyond this range.
+
+From this zoomed plot, we can approximate \( n_0 \) to be around \( n = 1 \), corresponding to the point where the polynomial fit closely matches the actual timings. The curve remains consistent with the quadratic trend for larger values of \( n \).
+
+## Function Modification and Its Impact on Performance
+
+### Modified Function:
 ```javascript
-function x = f(n)
+x = f(n)
    x = 1;
+   y = 1;
    for i = 1:n
         for j = 1:n
              x = x + 1;
+   y = i + j;
 ```
-1. Find the runtime of the algorithm mathematically (I should see summations).
 
-## Step-by-Step Analysis:
+### Will this increase how long it takes the algorithm to run (e.g., you are timing the function like in #2)?
 
-### 1. **Initialization Step**
-- The statement `x = 1;` is executed **once** before the loops begin.
-- The cost of this step is a constant, denoted by `c1 = 1`.
+Yes, this will increase how long it takes the algorithm to run, but only slightly. The additional operation `y = i + j` adds extra work after the nested loops, but since it is done only after the loops finish, it does not affect the overall time complexity.
 
-### 2. **Outer Loop (`i = 1` to `n`)**
-- The outer loop runs **`n` times**. For each iteration of the outer loop (indexed by `i`), the inner loop is executed once.
+The nested loops still run \( n^2 \) times, and the new operation (`y = i + j`) is a single arithmetic operation that runs \( O(1) \) time outside the nested loops. Therefore, the overall time complexity remains \( O(n^2) \), and while it takes slightly longer in terms of absolute execution time, it doesn't change the big picture.
 
-### 3. **Inner Loop (`j = 1` to `n`)**
-- The inner loop runs **`n` times** for each iteration of the outer loop. Therefore, for each value of `i`, the statement inside the inner loop will be executed `n` times.
+### 5. Will it affect your results from #1?
 
-### 4. **Statement Inside the Inner Loop**
-- The statement `x = x + 1;` is executed **once** for each iteration of the inner loop. Therefore, for each of the `n` iterations of the outer loop, the statement `x = x + 1;` is executed `n` times.
+The execution time will increase slightly, but it won't significantly affect the results of the timing in #1. The relationship between `n` and the execution time will still follow a quadratic trend. This means that:
 
----
+- **Polynomial fit**: The polynomial curve from the timing results might change slightly, but the overall shape of the graph will remain the same, reflecting \( O(n^2) \).
+- **Timing differences**: The times will increase, but the increase will be negligible enough that the results and conclusions from question #1 remain valid.
 
-## Summation Analysis:
+## 6. Merge Sort Implementation
 
-We want to calculate the **total number of executions** of the statement `x = x + 1;`.
+A TypeScript implementation of merge sort is provided in the [MergeSort](mergeSort.ts) file. The merge sort algorithm is tested on the array `[5, 2, 4, 7, 1, 3, 2, 6]`. You can find the implementation and test results within this file.
 
-Let `T(n)` represent the total number of times the statement `x = x + 1;` is executed.
-
-Since the inner statement executes once for every pair of `(i, j)`, the total number of executions is represented by a **double summation**:
-
-\[
-T(n)=i=1∑n​j=1∑n​1
-\]
-
-### Evaluating the Inner Summation:
-The inner summation (over `j`) is independent of `i`, and since the summation over `j` runs from 1 to `n`, the result is:
-
-\[
-\∑n​1=n
-\]
-
-### Evaluating the Outer Summation:
-Now substitute the result of the inner summation into the outer summation. We get:
-
-\[
-T(n)=i=1∑n​n
-\]
-
-This means that for each of the `n` iterations of the outer loop, the inner loop contributes `n` executions of the statement. Therefore:
-
-\[
-T(n)=n×n=n
-\]
-
----
-
-## Final Result:
-
-Thus, the total number of executions of the statement `x = x + 1;` is \( n^2 \). Including the initialization step (`x = 1`), the total runtime is:
-
-\[
-T(n) = 1 + n^2
-\]
-
-However, in asymptotic analysis, constant terms (like the `1` in this case) are insignificant compared to terms that grow with `n`. Therefore, the runtime of the algorithm is dominated by \( n^2 \). The **time complexity** of the algorithm is:
-
-\[
-T(n)=O(n2)\]
-
----
