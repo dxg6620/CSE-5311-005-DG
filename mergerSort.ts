@@ -27,6 +27,6 @@ function merge<T>(left: T[], right: T[]): T[] {
     return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
-const array: number[] = [38, 27, 43, 3, 9, 82, 10];
+const array: number[] = [5,2,4,7,1,3,2,6];
 const sortedArray: number[] = mergeSort(array);
 console.log(sortedArray);
