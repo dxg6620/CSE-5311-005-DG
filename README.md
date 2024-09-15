@@ -223,7 +223,7 @@ Total Time Complexity:
 T(n)=O(n)
 T(n)=O(n)
 
-###Improvement
+### Improvement
 Improvements to the implementation could include modifying the array in place to avoid slicing, thereby saving memory by not creating a new array and instead returning the length of the unique part. Additionally, you could consider adding logic for early termination if duplicates are no longer encountered, although this might have minimal impact due to the array already being sorted.
 
 
