@@ -6,15 +6,15 @@ class MinHeap<T> {
     }
 
     private parentIndex(index: number): number {
-        return (index - 1) >> 1; // Bitwise shift operator for division by 2
+        return (index - 1) >> 1;
     }
 
     private leftChildIndex(index: number): number {
-        return (index << 1) + 1; // Bitwise shift operator for multiplication by 2
+        return (index << 1) + 1;
     }
 
     private rightChildIndex(index: number): number {
-        return (index << 1) + 2; // Bitwise shift operator for multiplication by 2
+        return (index << 1) + 2; 
     }
 
     private swap(i: number, j: number): void {
@@ -28,7 +28,6 @@ class MinHeap<T> {
         }
     }
 
-    // Heapify down (used for removing the root)
     private heapifyDown(index: number): void {
         let smallest = index;
         const left = this.leftChildIndex(index);
