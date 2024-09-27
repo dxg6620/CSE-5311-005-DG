@@ -75,3 +75,17 @@ function benchmarkQuickSort() {
 
 // Call the benchmark function and log results
 const benchmarkResults = benchmarkQuickSort();
+
+/*
+Best Case (n=100): 0.08283299999999372ms
+Worst Case (n=100): 0.037332999999989624ms
+Average Case (n=100): 0.05020799999999781ms
+Best Case (n=1000): 0.4142089999999996ms
+Worst Case (n=1000): 0.2400829999999985ms
+Average Case (n=1000): 0.34575000000000955ms
+Best Case (n=10000): 5.17658400000002ms
+Worst Case (n=10000): 1.204499999999996ms
+Average Case (n=10000): 1.5180409999999824ms
+Best Case (n=100000): 14.19545800000003ms
+Worst Case (n=100000): 12.092624999999998ms
+Average Case (n=100000): 35.753916000000004ms*/
