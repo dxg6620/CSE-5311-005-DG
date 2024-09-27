@@ -85,7 +85,8 @@ function benchmarkQuickSort() {
 
 
   const benchmarkResults = benchmarkQuickSort();
-  
+
+  //result obtained from running code locally
   /*
   Best Case (n=100): 0.08283299999999372ms
   Worst Case (n=100): 0.037332999999989624ms
@@ -137,5 +138,5 @@ T(n)=n+n+n+⋯+n(log n terms)
 Therefore
 T(n)=nlogn
 
-SO average case is 
+So average case is 
 T(n)=O(nlogn)
