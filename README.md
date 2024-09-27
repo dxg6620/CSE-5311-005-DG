@@ -140,3 +140,7 @@ T(n)=nlogn
 
 So average case is 
 T(n)=O(nlogn)
+
+
+
+Relavant code is given in the root folder.
