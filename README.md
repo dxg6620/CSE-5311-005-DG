@@ -1,6 +1,6 @@
 # Hands on 6
 
-1. Implement both versions of quicksort (random and non-random choice for the pivot) and share the GitHub repository with your source code.
+## 1. Implement both versions of quicksort (random and non-random choice for the pivot) and share the GitHub repository with your source code.
   ```js
 function quicksortRandom(arr: number[]): number[] {
     if (arr.length <= 1) return arr;
@@ -24,7 +24,7 @@ function quicksort(arr: number[]): number[] {
     return [...quicksort(left), ...middle, ...quicksort(right)];
 }
   ```
-2.  For the non-random pivot version of quicksort show the following benchmarks on the same graph:
+## 2.  For the non-random pivot version of quicksort show the following benchmarks on the same graph:
 
     2a) best case (generate a set of inputs that will always be the best case, repeat for multiple array input sizes "n").
 
@@ -102,3 +102,40 @@ function benchmarkQuickSort() {
 ```
 
 ![Graph plot](Benchmark.png)
+
+## 3. Mathematically derive the average runtime complexity of the non-random pivot version of quicksort.
+
+Let T(n) be the time complexity to sort an array of size nn using quicksort. In each step of quicksort, the algorithm chooses a pivot element and partitions the array into two subarrays:
+
+-  One subarray contains elements smaller than the pivot.
+-  The other subarray contains elements greater than the pivot.
+
+The partition step takes linear time, i.e., O(n).
+
+If we assume that the input array is a random permutation of the data, the pivot will divide the array into two subarrays of expected sizes close to (n/2​), though the exact sizes vary depending on the pivot selection. Therefore, we need to derive a recurrence relation for the expected time complexity.
+
+2. Recurrence Relation for Expected Time Complexity
+
+At each step, the time complexity of quicksort can be expressed as:
+T(n)=T(size of left subarray)+T(size of right subarray)+cost of partitioning
+
+On average, the pivot splits the array into two subarrays of approximately equal size (i.e., n/2​). Therefore, the recurrence relation for the expected time complexity can be written as:
+T(n)=T(n/2)+T(n/2)+n
+
+This can be simplified to:
+T(n)=2T(2n​)+n
+
+3. Solving the Recurrence Relation
+
+- At the first level, the cost is T(n)=n.
+- At the second level, the cost is 2T(2n​)=2⋅2n​=n.
+- At the third level, the cost is 4T(4n​)=4⋅4n​=n.
+
+This pattern continues until we reach subarrays of size 1. The recurrence can be expanded as follows:
+T(n)=n+n+n+⋯+n(log n terms)
+
+Therefore
+T(n)=nlogn
+
+SO average case is 
+T(n)=O(nlogn)
