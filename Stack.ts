@@ -1,11 +1,11 @@
 class Stack {
-  private arr: number[];
+  private arr: Int32Array;
   private top: number;
   private maxSize: number;
 
   constructor(size: number) {
     this.maxSize = size;
-    this.arr = new Array(this.maxSize);
+    this.arr = new Int32Array(this.maxSize);
     this.top = -1;
   }
 
