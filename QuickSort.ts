@@ -29,11 +29,24 @@ function quickSelect(arr: Int32Array, low: number, high: number, k: number): num
   return -1; 
 }
 
-function findKthSmallestElement() {
-  const arr = new Int32Array([12, 3, 5, 7, 19, 26, 1, 4]);
-  const k = 4;  // We are looking for the 4th smallest element
-  const result = quickSelect(arr, 0, arr.length - 1, k);
-  console.log(`${k}th smallest element is ${result}`);
+function generateRandomArray(size: number): Int32Array {
+  const arr = new Int32Array(size);
+  for (let i = 0; i < size; i++) {
+    arr[i] = Math.floor(Math.random() * 100);
+  }
+  return arr;
 }
 
-findKthSmallestElement();
+function testMultipleExamples(numExamples: number, arraySize: number) {
+  for (let i = 0; i < numExamples; i++) {
+    const arr = generateRandomArray(arraySize);
+    const k = Math.floor(Math.random() * arraySize) + 1; 
+    const result = quickSelect(arr, 0, arr.length - 1, k);
+    console.log(`Test Case ${i + 1}:`);
+    console.log(`Array: ${arr}`);
+    console.log(`${k}th smallest element is ${result}`);
+    console.log('---------------------------------');
+  }
+}
+
+testMultipleExamples(5, 10);
