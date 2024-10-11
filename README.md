@@ -23,4 +23,4 @@
     "4th smallest element is 28"
     "---------------------------------"
     ```
-2. [Stakc](Stack.ts), [Queue](Queue.ts) and [Linked List](LinkedList.ts) is implemented using fixed array size.
+2. [Stack](Stack.ts), [Queue](Queue.ts) and [Linked List](LinkedList.ts) is implemented using fixed array size.
