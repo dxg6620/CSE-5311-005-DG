@@ -1,12 +1,12 @@
 class Queue {
-  private arr: number[];
+  private arr: Int32Array;
   private front: number;
   private rear: number;
   private maxSize: number;
 
   constructor(size: number) {
     this.maxSize = size;
-    this.arr = new Array(this.maxSize);
+    this.arr = new Int32Array(this.maxSize); 
     this.front = -1;
     this.rear = -1;
   }
