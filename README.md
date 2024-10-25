@@ -1,6 +1,12 @@
+# Hands on 10
 
+## Questions
 
-# CSE-5311-005-DG Assignment Submissions
+1. Implement "The basic" Binary Search Tree; this is the one that can be unbalanced.
+2. Implement a Red Black Tree.
+3. Implement an AVL Tree.
 
-**UTA ID:** dxg6620  
-This repository contains my assignment submissions for CSE-5311-005. Please check the relevant branches for each assignment's code and documentation.
+## Answers
+- The implementation for the Binary Search Tree can be found in `BST.ts`.
+- The implementation for the Red Black Tree can be found in `RBT.ts`.
+- The implementation for the AVL Tree can be found in `AVL.ts`.
